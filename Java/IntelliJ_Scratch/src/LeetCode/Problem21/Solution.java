@@ -1,6 +1,6 @@
 package LeetCode.Problem21;
 
-import java.util.List;
+import LeetCode.ListNode;
 
 public class Solution {
     /**
