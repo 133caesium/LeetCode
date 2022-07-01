@@ -3,6 +3,17 @@ package LeetCode.Problem70;
 import java.math.BigInteger;
 
 class Solution {
+
+    public int climbStairs(int n) {
+        int[] stairs = new int[n];
+        stairs[0] = 1;
+        if (n>1) stairs[1] = 2;
+        for (int i = 2; i<n; i++) {
+            stairs[i] = stairs[i-1] + stairs [i-2];
+        }
+        return stairs[n-1];
+    }
+
     public BigInteger factorial(long start, long stop) {
         if (start <= stop) {
             return new BigInteger("1");
@@ -17,7 +28,7 @@ class Solution {
         return new_paths.intValue();
     }
 
-    public int climbStairs(int n) {
+    public int climbStairs_old(int n) {
         long twos = n/2;
         long ones = n % 2;
         long count = 1; // We don't need to count the base case of all 1s separately
